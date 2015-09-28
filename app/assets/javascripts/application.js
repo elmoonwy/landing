@@ -13,4 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap/js/bootstrap
+//= require back-to-top
+//= require smoothScroll
+//= require jquery.mixitup.min
+//= require parallax-slider/js/modernizr
+//= require parallax-slider/js/jquery.cslider
 //= require_tree .

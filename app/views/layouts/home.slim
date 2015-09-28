@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title Eligibility Platform
+        meta charset="uft-8"
+        meta name="viewport" content="width=device-width, initial-scale=1.0"
+        meta name="author" content="Lucas Wang"
+        == stylesheet_link_tag 'application'
+        == stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'
+        == csrf_meta_tags
+
+    body
+        div class="wrapper"
+            == render '/layouts/header'
+            == render '/layouts/sub_header/home_7'
+
+            == yield
+            == render "/layouts/footer"
+        == javascript_include_tag 'application', 'data-turbolinks-track': true
+        == yield :js
+

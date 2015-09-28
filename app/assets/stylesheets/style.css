@@ -13,7 +13,7 @@
 @import url(app.css);
 
 /*Import CSS Plugins*/
-@import url(plugins/style-switcher.css);
+@import url(style-switcher/style-switcher.css);
 
 body { 
    color: #333; 
