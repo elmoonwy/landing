@@ -16,7 +16,10 @@
 //= require bootstrap/js/bootstrap
 //= require back-to-top
 //= require smoothScroll
-//= require jquery.mixitup.min
-//= require parallax-slider/js/modernizr
-//= require parallax-slider/js/jquery.cslider
-//= require_tree .
+//= require jquery.parallax
+
+// home_7 require
+// require parallax-slider/js/modernizr
+// require parallax-slider/js/jquery.cslider
+// require jquery.mixitup.min
+

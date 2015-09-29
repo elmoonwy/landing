@@ -2129,7 +2129,8 @@
     overflow: hidden;
     text-align: center;
     position: relative;
-    background: url(../img/bg/25.jpg) 50% 0 fixed;
+    /*background: url(../img/bg/25.jpg) 50% 0 fixed;*/
+    background: url(background/25.jpg) 50% 0 fixed;
 }
 
 .parallax-counter-v3:after {
@@ -2895,7 +2896,8 @@
 }
 
 .interactive-slider-v2.img-v1 {
-  background: url(../img/bg/25.jpg) no-repeat;
+  background: url(background/25.jpg) no-repeat;
+  /*background: url(../img/bg/25.jpg) no-repeat;*/
   background-size: cover;
   background-position: center center;
 }

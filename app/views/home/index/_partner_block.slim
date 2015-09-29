@@ -1,0 +1,5 @@
+div class="container"
+  ul class="list-inline owl-carousel-v6 owl-slider-v6 margin-bottom-50"
+    - @partners.each do |partner|
+        li class="owl-carousel-item"
+            == image_tag partner, alt: ""

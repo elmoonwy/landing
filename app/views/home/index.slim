@@ -1,75 +1,15 @@
-== stylesheet_link_tag "portfolio-v2"
-== javascript_include_tag "page_portfolio", "parallax-slider"
-div class="container content-sm"
-  div class="row content-boxes-v4"
-    div class="col-md-4 md-margin-bottom-40"
-      i class="pull-left fa fa-lightbulb-o"
-      div class="content-boxed-in-v4"
-        h2 Accurate
-        p
-          We are really accurate
-        a href="#"
-            Learn More
-    div class="col-md-4 md-margin-bottom-40"
-      i class="pull-left fa fa-lightbulb-o"
-      div class="content-boxed-in-v4"
-        h2 Secure
-        p
-          We are really accurate
-        a href="#"
-            Learn More
-    div class="col-md-4 md-margin-bottom-40"
-      i class="pull-left fa fa-lightbulb-o"
-      div class="content-boxed-in-v4"
-        h2 Real Time
-        p
-          We are really accurate
-        a href="#"
-            Learn More
-div class="bg-grey content-sm"
-  div class="container"
-    div class="row"
-      div class="col-sm-4 info-blocks"
-        i class="icon-info-blocks fa fa-hdd-o"
-        div class="info-blocks-in"
-          h3 Free Updates
-          p
-            At asd asd asd asd
-      div class="col-sm-4 info-blocks"
-        i class="icon-info-blocks fa fa-hdd-o"
-        div class="info-blocks-in"
-          h3 Free Updates
-          p
-            At asd asd asd asd
-      div class="col-sm-4 info-blocks"
-        i class="icon-info-blocks fa fa-hdd-o"
-        div class="info-blocks-in"
-          h3 Free Updates
-          p
-            At asd asd asd asd
-      div class="col-sm-4 info-blocks"
-        i class="icon-info-blocks fa fa-hdd-o"
-        div class="info-blocks-in"
-          h3 Free Updates
-          p
-            At asd asd asd asd
-      div class="col-sm-4 info-blocks"
-        i class="icon-info-blocks fa fa-hdd-o"
-        div class="info-blocks-in"
-          h3 Free Updates
-          p
-            At asd asd asd asd
-      div class="col-sm-4 info-blocks"
-        i class="icon-info-blocks fa fa-hdd-o"
-        div class="info-blocks-in"
-          h3 Free Updates
-          p
-            At asd asd asd asd
-
 == content_for :js
     javascript:
         $(function(){
-            App.init();
-            PortfolioPage.init();
-            ParallaxSlider.initParallaxSlider();
+            App.initParallaxBg();
+            App.initCounter();
+            OwlCarousel.initOwlCarousel();
+            RevolutionSlider.initRSfullWidth();
         })
+
+== render "/home/index/home_11"
+== render "/home/index/keynote_cycle"
+== render "/home/index/counter_cycle"
+== render "/home/index/feature_block"
+== render "/home/index/service_block"
+== render "/home/index/partner_block", locals: {partner: @partner}
