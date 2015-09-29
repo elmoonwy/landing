@@ -14,5 +14,6 @@
 #= require counter/jquery.counterup.min.js
 #= require owl-carousel.js
 #= require revolution-slider.js
+#= require jquery-numerator.js
 
 App.init()
