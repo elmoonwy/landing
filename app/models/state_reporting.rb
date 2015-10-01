@@ -11,6 +11,7 @@ class StateReporting < ActiveRecord::Base
       if Rails.env.development?
         self.all.each { |record|
           record[:transaction_count] += rand(0..15)
+          record[:transaction_count] = 100 if record[:transaction_count] > 1000
           record.save
         }
       end
