@@ -5,11 +5,12 @@
             App.initCounter();
             OwlCarousel.initOwlCarousel();
             RevolutionSlider.initRSfullWidth();
+            new WOW().init();
         })
 
 == render "/home/index/home_11"
 == render "/home/index/keynote_cycle"
-== render "/home/index/counter_cycle"
+== render "/home/index/counter_box", locals: {counters: @counters}
 == render "/home/index/feature_block"
 == render "/home/index/service_block"
 == render "/home/index/partner_block", locals: {partner: @partner}

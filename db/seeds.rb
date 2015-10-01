@@ -5,3 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+reports = [
+  {transaction_result: "Attestation", transaction_count: 50},
+  {transaction_result: "CHIP", transaction_count: 50},
+  {transaction_result: "Comingled BIN", transaction_count: 50},
+  {transaction_result: "IndianAffairs", transaction_count: 50},
+  {transaction_result: "Medicaid", transaction_count: 50},
+  {transaction_result: "Medicare", transaction_count: 50},
+  {transaction_result: "No Federal Insurance", transaction_count: 50},
+  {transaction_result: "Veteran", transaction_count: 50}
+]
+
+reports.each {|report|
+    StateReporting.create(report)
+}

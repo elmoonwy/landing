@@ -1,0 +1,49 @@
+== content_for :js
+    javascript:
+      function set_counter(id, value){
+        config = {"easing": "swing", "duration": "3000"};
+        config["toValue"] = value;
+        $("#"+id).numerator(config);
+      }
+      function fetch_counters(){
+        $.ajax({
+          url: "/state_reporting/latest_report",
+          success: function(data){
+            set_counter("medicare", data["Medicare"]);
+            set_counter("medicaid", data["Medicaid"]);
+            set_counter("veteran", data["Veteran"]);
+            set_counter("total", data["total"]);
+          }
+        })
+        }
+      //setInterval(fetch_counters, 4000);
+
+div class="parallax-counter-v1 parallaxBg"
+  div class="container"
+    h2 class="title-v2 title-light title-center" SOME FACTS AND SERVICES
+    p class="space-xlg-hor text-center color-light"
+        |If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.
+
+    div class="margin-bottom-40"
+    div class="row margin-bottom-10"
+      div class="col-sm-3 col-xs-6"
+        div class="counters"
+          span class="counter" id="total"
+            == @counters["total"]
+          h4 Total
+      div class="col-sm-3 col-xs-6"
+        div class="counters"
+          span class="counter" id="medicare"
+            == @counters["Medicare"]
+          h4 Medicare
+      div class="col-sm-3 col-xs-6"
+        div class="counters"
+          span class="counter" id="medicaid"
+            == @counters["Medicaid"]
+          h4 Medicaid
+      div class="col-sm-3 col-xs-6"
+        div class="counters"
+          span class="counter" id="veteran"
+            == @counters["Veteran"]
+          h4 Veteran
+
