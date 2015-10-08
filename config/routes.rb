@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   get 'state_reporting/latest_report'
 
   root 'home#index'
+  get 'home/document'
 
+  get '/verify', to: "transactions#verify", as: "transactions_verify"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

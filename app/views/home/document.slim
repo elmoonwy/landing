@@ -1,0 +1,30 @@
+div class="container content"
+  div class="headline"
+    h1
+      | Eligibility API
+      small
+        | Basic Usage
+  div class="margin-bottom-40"
+  div class="tab-v2"
+    ul class="nav nav-tabs"
+      li class="active"
+          a href="#overview" data-toggle="tab"
+            | Overview
+      li
+        a href="#request" data-toggle="tab"
+          | Request
+      li
+        a href="#response" data-toggle="tab"
+          | Response
+      li
+        a href="#try" data-toggle="tab"
+          | Try
+    div class="tab-content"
+      div class="tab-pane fade in active" id="overview"
+        == render "home/document/overview"
+      div class="tab-pane fade in" id="request"
+        == render "home/document/request"
+      div class="tab-pane fade in" id="response"
+        == render "home/document/response"
+      div class="tab-pane fade in" id="try"
+        == render "home/document/try"

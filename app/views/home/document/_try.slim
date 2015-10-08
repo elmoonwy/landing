@@ -1,0 +1,45 @@
+p
+  | In order to try your own data and use it in your own applications, you need a API key. Contact us to create a free API key.
+
+div class="panel panel-grey margin-bottom-40"
+  div class="panel-heading"
+    h3 class="panel-title"
+        i class="fa fa-edit"
+        | Examples
+  div class="panel-body"
+    - @examples.each_with_index do |example, index|
+      button onClick="run_example(#{index});"
+          == example[:name]
+
+- @examples.each_with_index do |example, index|
+  div id="example-#{index}" style="display: none;" class="example_params"
+    h2
+      | Parameters
+    div class="panel panel-grey margin-bottom-40"
+      div class="panel-heading"
+        h3 class="panel-title"
+            i class="fa fa-edit"
+            | Parameters
+      table class="table table-hover"
+        thead
+          tr
+            th Parameter
+            th Description
+        tbody
+          - example[:params].each do |key, value|
+            tr
+              td
+                == key
+              td
+                == value
+    h2
+      | URL
+    div class="tag-box tag-box-v2 margin-bottom-40"
+      p
+        | /verify?#{example[:params].to_query}
+
+    h2
+      | Response
+    div class="tag-box tag-box-v2 margin-bottom-40" id="response-#{index}" data-params=example[:params].to_json
+      p
+        | Loading...

@@ -7,4 +7,9 @@ class HomeController < ApplicationController
     @counters = StateReporting.latest_report
     render layout: "home"
   end
+
+  def document
+    @examples = $EXAMPLES
+    @api_params = $API_PARAMS
+  end
 end

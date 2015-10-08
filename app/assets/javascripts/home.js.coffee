@@ -15,6 +15,7 @@
 #= require owl-carousel.js
 #= require revolution-slider.js
 #= require jquery-numerator.js
-##= require wow-animations/js/wow.min.js
+#= require wow-animations/js/wow.min.js
+#= require document.js
 
 App.init()

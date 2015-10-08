@@ -1,7 +1,7 @@
 div class="header"
   div class="container"
-      a class="logo" href="#"
-          == image_tag "logo.png", alt: "Logo"
+    == link_to root_path, class: "logo"
+      == image_tag "logo.png", alt: "Logo"
       button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse"
           span class="sr-only"
               Toggle Navigation
@@ -14,7 +14,7 @@ div class="header"
               li
                   a href="#" What we do?
               li
-                  a href="#" Eligibility API
+                  == link_to "Documents", home_document_path
               li
                   a href="#" Data Visualization
               li

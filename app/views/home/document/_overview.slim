@@ -1,0 +1,14 @@
+p
+  | The eligibility api analyzes an client information to verify eligibility. It will return the eligibility result.
+h2
+  | Quick Start
+p
+  | Below is a example of eligibility request.
+div class="tag-box tag-box-v2 margin-bottom-40"
+  p
+    | verify?dob_day=25&dob_month=03&dob_year=1927&fname=Tom&gender=M&lname=Wang&state=VA&zipcode=22202
+p
+  | The API response will contain the eligibility result and more information based on your service. It is possible that you can customized your unique response message and information.
+div class="tag-box tag-box-v2 margin-bottom-40"
+  p
+    | {"result":"yes","info":"The claim is approved"}
