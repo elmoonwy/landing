@@ -10,7 +10,7 @@ html
         == stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'
         == yield :styles
         == csrf_meta_tags
-    body
+    body class="#{controller_name} #{action_name}"
         div class="wrapper page-option-v1"
             == render '/layouts/header'
             == yield

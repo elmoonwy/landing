@@ -1,7 +1,7 @@
 div class="header"
   div class="container"
     == link_to root_path, class: "logo"
-      == image_tag "logo.png", alt: "Logo"
+      == image_tag "product_logo.png", alt: "Logo"
       button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse"
           span class="sr-only"
               Toggle Navigation
@@ -10,15 +10,15 @@ div class="header"
       div class="container"
           ul class="nav navbar-nav"
               li
-                  a href="#" Who we are?
+                == link_to "Home", root_path
               li
-                  a href="#" What we do?
+                == link_to "Demo", home_demo_path
               li
-                  == link_to "Documents", home_document_path
+                == link_to "Live", home_live_path
               li
-                  a href="#" Data Visualization
+                == link_to "Documents", home_document_path
               li
-                  a href="#" Price
+                a href="#" Price
               li
-                  a href="#" Blog
+                a href="#" Blog
 

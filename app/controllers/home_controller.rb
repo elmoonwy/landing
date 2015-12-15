@@ -12,4 +12,13 @@ class HomeController < ApplicationController
     @examples = $EXAMPLES
     @api_params = $API_PARAMS
   end
+
+  def demo
+  end
+
+  def live
+  end
+
+  def price
+  end
 end

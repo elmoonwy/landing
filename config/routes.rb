@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   root 'home#index'
   get 'home/document'
+  get 'home/demo'
+  get 'home/live'
 
   get '/verify', to: "transactions#verify", as: "transactions_verify"
   # The priority is based upon order of creation: first created -> highest priority.

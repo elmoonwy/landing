@@ -6,6 +6,9 @@
         $("#"+id).numerator(config);
       }
       function fetch_counters(){
+        if ($(".home.index").length < 1){
+        return
+        }
         $.ajax({
           url: "/state_reporting/latest_report",
           success: function(data){
